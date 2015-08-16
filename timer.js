@@ -118,12 +118,22 @@ $(function(){
     var sw = new Stopwatch();
     var ac = new AlarmClock();
     var timer = sw;
+    timer.pause();
 
-   /* setInterval(function(){
-        //$('#print').text(timer.toString());
-        $('#print').text(timer.toString());
-        timer.show()
-    },50);*/
+
+    var id;
+    $('#run').on('click',function(){
+        id = setInterval(function(){
+
+         $('#print').text(timer.toString());
+         timer.show()
+         },50);
+    });
+
+    $('#stop').on('click',function(){
+        clearInterval(id);
+
+    });
 
     $('#countdown').on('click',function(){
         $('#timerName').text('Countdown');
@@ -163,14 +173,17 @@ $(function(){
     $('#show').on('click',function(){
         timer.show();
         $('#print').text(timer.toString());
+        timer.show();
     });
-    $('#stop').on('click',function(){
-        console.log(timer.pause());
+    $('#pause').on('click',function(){
+        timer.pause();
     });
     $('#continue').on('click',function(){
-        console.log(timer.play());
+        timer.play();
     });
     $('#refresh').on('click',function(){
-        console.log(timer.refresh());
+       timer.refresh();
+        $('#print').text(timer.toString());
+        timer.show()
     });
 });
