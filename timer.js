@@ -132,7 +132,6 @@ $(function(){
 
     $('#stop').on('click',function(){
         clearInterval(id);
-
     });
 
     $('#countdown').on('click',function(){
@@ -167,7 +166,6 @@ $(function(){
     $('#stopSec').blur(function (){
         ac.refresh();
         ac.setStopSec(parseInt($('#stopSec').val()));
-
     });
 
     $('#show').on('click',function(){
@@ -182,7 +180,7 @@ $(function(){
         timer.play();
     });
     $('#refresh').on('click',function(){
-       timer.refresh();
+        timer.refresh();
         $('#print').text(timer.toString());
         timer.show()
     });

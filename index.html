@@ -10,9 +10,15 @@
 <div class="container text-center well">
     <div class="row">
         <p id="timerName">Choose your Timer</p>
-        <p id="print">00 : 00 : 00.000</p>
+        <p id="print">00 : 00 : 00.0</p>
     </div>
     <div class="row">
+        <div class="row">
+            <button type="button" class="btn btn-default" id="countdown">Countdown</button>
+            <button type="button" class="btn btn-default" id="stopwatch">Stopwatch</button>
+            <button type="button" class="btn btn-default" id="alarmclock" >Run Alarm clock </button> <input size="2" type="text" id="stopSec"/>:Number of Seconds
+        </div>
+        <br/>
         <div class="btn-group" role="group" aria-label="Default button group">
             <button type="button" class="btn btn-default" id="show">Show</button>
             <button type="button" class="btn btn-default" id="pause">Pause</button>
@@ -25,11 +31,6 @@
         </div>
     </div>
     <br/>
-    <div class="row">
-        <button type="button" class="btn btn-default" id="countdown">Countdown</button>
-        <button type="button" class="btn btn-default" id="stopwatch">Stopwatch</button>
-        <button type="button" class="btn btn-default" id="alarmclock" >Run Alarm clock </button> <input size="2" type="text" id="stopSec"/>:Number of Seconds
-    </div>
 </div>
 
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
